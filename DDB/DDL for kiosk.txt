@@ -1,0 +1,46 @@
+DDL for kiosk;
+
+SQL> desc BIKE;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ BIKE_ID                                   NOT NULL NUMBER(10)
+ RFID                                      NOT NULL VARCHAR2(20)
+ BSIZE                                     NOT NULL NUMBER(10)
+
+ SQL> desc TOUR;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ TOUR_ID                                   NOT NULL NUMBER(10)
+ SOURCE                                             NUMBER(10)
+ DESTINATION                                        NUMBER(10)
+ C_ID
+
+ SQL> desc CUSTOMER;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ C_ID                                      NOT NULL NUMBER(10)
+ NAME                                      NOT NULL VARCHAR2(20)
+ ADDRESS                                   NOT NULL VARCHAR2(20)
+ MOB                                       NOT NULL VARCHAR2(10)
+ GENDER                                    NOT NULL VARCHAR2(6)
+ BALANCE                                            NUMBER(10)
+
+ SQL> desc STATION;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ STATION_ID                                NOT NULL NUMBER(10)
+ NAME                                      NOT NULL VARCHAR2(20)
+ LOCATION                                  NOT NULL VARCHAR2(20)
+ CAPACITY                                  NOT NULL NUMBER(10)
+ DISTANCE                                           VARCHAR2(5)
+
+ SQL> desc TRANSSACTION;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ T_ID                                      NOT NULL NUMBER(10)
+ C_ID                                      NOT NULL NUMBER(10)
+ BIKE_ID                                   NOT NULL NUMBER(10)
+ STATION_ID                                NOT NULL NUMBER(10)
+ SOURCE                                    NOT NULL NUMBER(10)
+ DESTINATION                               NOT NULL NUMBER(10)
+ AMOUNT                                    NOT NULL NUMBER(10)
